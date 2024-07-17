@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-display {
+    background: #222;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.key {
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.key:hover {
+    background: #d0d0d0;
+}
+
+.key[data-action="operation"] {
+    background: #f9a825;
+    color: white;
+}
+
+.key[data-action="operation"]:hover {
+    background: #f57f17;
+}
+
+.key[data-action="calculate"] {
+    background: #64dd17;
+    color: white;
+}
+
+.key[data-action="calculate"]:hover {
+    background: #388e3c;
+}
+
+.key[data-action="clear"],
+.key[data-action="delete"] {
+    background: #ff5252;
+    color: white;
+}
+
+.key[data-action="clear"]:hover,
+.key[data-action="delete"]:hover {
+    background: #e53935;
+}
